@@ -1,21 +1,7 @@
-#Create terminal blackjack game
-from classes.stackOfDecks import StackOfDecks
+from classes.game import BlackjackGame
 
-
-def main():
-    choice = input("Do you want to play a game of blackjack? (yes/no) ")
-    if choice == "yes":
-        print("Let's play!")
-        number_of_decks = int(input("Number of decks: "))
-        stack = StackOfDecks(number_of_decks)
-        
-        
-    else:
-        print("Goodbye!")
-
-def game():
-    #TODO: Create class instances for blackjack
-    ...
 
 if __name__ == "__main__":
-    main()
+    num_decks = int(input("Enter number of decks to use (e.g., 1, 2, 4, 6, 8): "))
+    game = BlackjackGame(num_decks)
+    game.run()

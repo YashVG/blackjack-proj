@@ -17,7 +17,7 @@ class Card:
             return 11  
             # Default value for Ace
         else:
-            return int(self.value)
+            return int(self.rank.value)
     
     def __str__(self) -> str:
         """Returns string representation of the card"""
