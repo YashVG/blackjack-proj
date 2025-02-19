@@ -9,6 +9,7 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.hand = Hand()
+        self.has_stood = False
 
     def draw(self, deck):
         card = deck.draw_card()
