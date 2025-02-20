@@ -24,3 +24,7 @@ class Hand:
 
     def display(self):
         return ', '.join(str(card) for card in self.cards)
+
+    #adding function to return length of hand for dealing purposes
+    def hand_size(self):
+        return len(self.cards)

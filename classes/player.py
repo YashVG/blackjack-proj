@@ -11,10 +11,13 @@ class Player:
         self.hand = Hand()
         self.has_stood = False
 
-    def draw(self, deck):
+    def draw(self, deck, hide_card=False):
         card = deck.draw_card()
         self.hand.add_card(card)
-        print(f"{self.name} draws: {card}")
+        if hide_card:
+            print(f"{self.name} draws: ?")
+        else:
+            print(f"{self.name} draws: {card}")
 
     def get_hand_value(self):
         return self.hand.calculate_value()

@@ -17,9 +17,11 @@ class BlackjackGame:
         self.setup_game()
 
     def setup_game(self):
-        for _ in range(2):  # Deal initial two cards to both player and dealer
-            self.player.draw(self.deck)
-            self.dealer.draw(self.deck)
+        
+        self.player.draw(self.deck)
+        self.dealer.draw(self.deck)
+        self.player.draw(self.deck)
+        self.dealer.draw(self.deck, hide_card=True)
 
         # Print initial hands
         print(f"Player's hand: {self.player.show_hand()} (Value: {self.player.get_hand_value()})")
